@@ -1,7 +1,7 @@
 import '../../assets/css/App.css';
 
 const App = () => {
-	let x = 5;
+	let x = 6;
 	return (
 		<div>
 			<h1 className='bg-primary'>
