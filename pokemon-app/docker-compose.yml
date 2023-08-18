@@ -28,6 +28,20 @@ services:
     restart: always
 
 
+  pokemon-app:
+    depends_on:
+      - db
+      - mongo-express
+    container_name: pokemon-app
+    image: klerith/pokemon-nest-app:1.0.0
+    environment:
+      MONGODB: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_DB_NAME}:27017
+      DB_NAME: ${MONGO_DB_NAME}
+    ports:
+      - 3000:3000
+    restart: always
+
+
 volumes:
   poke-vol:
     external:
