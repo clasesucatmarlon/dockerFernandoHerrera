@@ -1,12 +1,16 @@
-import '../../assets/css/App.css'
+import '../../assets/css/App.css';
+import About from '../About/About';
+import Header from '../Header/Header';
+import Hero from '../Hero/Hero';
 
-const App = () => {
+function App() {
 	return (
-		<div>
-			<h1 className='bg-primary'> Hello Marlon GARCIA this is a test run of 22233
-			</h1>
-		</div>
+		<>
+			<Header />
+			<Hero />
+			<About />
+		</>
 	);
-};
+}
 
-export default App
+export default App;
